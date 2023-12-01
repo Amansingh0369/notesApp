@@ -38,15 +38,15 @@ const Signup = () => {
 
             if (response.ok) {
                 // User created successfully, you can handle success as needed
-                console.log(data.message);
+                alert(data.message);
                 localStorage.setItem("email", data.email);
                 navigate("/notes");
             } else {
                 // User creation failed, handle the error
-                console.error(data.message);
+                alert(data.message);
             }
         } catch (error) {
-            console.error("Error during signup:", error);
+            alert("Error during signup:", error);
             // Handle unexpected errors
         }
     };

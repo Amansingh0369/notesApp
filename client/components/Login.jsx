@@ -35,15 +35,15 @@ const Login = () => {
 
             if (response.ok) {
                 // Logged in successfully, you can handle success as needed
-                console.log("Logged in successfully:", data.message);
+                alert("Logged in successfully:", data.message);
                 localStorage.setItem("email", data.email);
                 navigate("/notes");
             } else {
                 // Login failed, handle the error
-                console.error("Login failed:", data.message);
+                alert("Login failed:", data.message);
             }
         } catch (error) {
-            console.error("Error during login:", error);
+            alert("Error during login:", error);
             // Handle unexpected errors
         }
     };
